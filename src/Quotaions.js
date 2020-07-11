@@ -62,11 +62,13 @@ const Quotations = () => {
   return (
     <div>
       <h1>Quotations</h1>
-      {quoteid <= quotes.length
-        ? quotes
-            .filter((quote) => quote.id === quoteid)
-            .map((quotations) => quotations.quotation)
-        : setQuoteId(1)}
+      <div>
+        {quoteid <= quotes.length
+          ? quotes
+              .filter((quote) => quote.id === quoteid)
+              .map((quotations) => quotations.quotation)
+          : setQuoteId(1)}
+      </div>
       <br />
       <button onClick={() => setQuoteId(++quoteid)}>Next</button>
     </div>
