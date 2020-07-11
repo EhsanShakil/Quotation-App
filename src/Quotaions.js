@@ -58,9 +58,17 @@ const Quotations = () => {
         "It does not matter how slowly you go as long as you do not stop.",
     },
   ]);
+  let [quoteid, setQuoteId] = useState(1);
   return (
     <div>
       <h1>Quotations</h1>
+      {quoteid <= quotes.length
+        ? quotes
+            .filter((quote) => quote.id === quoteid)
+            .map((quotations) => quotations.quotation)
+        : setQuoteId(1)}
+      <br />
+      <button onClick={() => setQuoteId(++quoteid)}>Next</button>
     </div>
   );
 };
