@@ -25,8 +25,8 @@ const Quotations = () => {
     },
     {
       id: 5,
-      title: "Helen Keller",
-      quotation: `"The best and most beautiful things in the world cannot be seen or even touched - they must be felt with the heart."`,
+      title: "Milton Berle",
+      quotation: `"If opportunity doesn’t knock, build a door."`,
     },
     {
       id: 6,
@@ -63,6 +63,13 @@ const Quotations = () => {
           ? quotes
               .filter((quote) => quote.id === quoteid)
               .map((quotations) => quotations.quotation)
+          : setQuoteId(1)}
+      </div>
+      <div className="title">
+        {quoteid <= quotes.length
+          ? quotes
+              .filter((quote) => quote.id === quoteid)
+              .map((quotations) => quotations.title)
           : setQuoteId(1)}
       </div>
       <br />
