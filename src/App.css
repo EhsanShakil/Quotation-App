@@ -56,3 +56,6 @@ body {
   font-family: "Fondamento", cursive;
   outline: none;
 }
+.disable {
+  display: none;
+}

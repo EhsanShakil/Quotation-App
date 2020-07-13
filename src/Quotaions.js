@@ -75,9 +75,13 @@ const Quotations = () => {
               : setQuoteId(1)}
           </div>
           <br />
-          <button className="button" onClick={() => setQuoteId(++quoteid)}>
-            Next
-          </button>
+          {quoteid < quotes.length ? (
+            <button className="button" onClick={() => setQuoteId(++quoteid)}>
+              Next
+            </button>
+          ) : (
+            quoteid > quotes.length && "disable"
+          )}
         </div>
       </div>
     </div>
