@@ -1,10 +1,35 @@
 @import url("https://fonts.googleapis.com/css2?family=Fondamento&family=Grenze+Gotisch:wght@500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Merienda+One&display=swap");
 
+body {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  background: #f953c6; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #b91d73,
+    #f953c6
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #b91d73,
+    #f953c6
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .app {
   display: flex;
   flex-direction: column;
   align-items: center;
+  border: 5px solid white;
+  border-radius: 20px;
+  padding: 10px;
+  width: 800px;
 }
 
 .quotes {
@@ -14,4 +39,20 @@
 }
 .title {
   font-family: "Merienda One", cursive;
+}
+.heading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.button {
+  background-color: white;
+  color: black;
+  width: 125px;
+  height: 30px;
+  border-radius: 20px;
+  font-weight: bold;
+  font-size: 18px;
+  font-family: "Fondamento", cursive;
+  outline: none;
 }

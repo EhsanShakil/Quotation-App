@@ -56,24 +56,30 @@ const Quotations = () => {
   ]);
   let [quoteid, setQuoteId] = useState(1);
   return (
-    <div className="app">
-      <h1>Quotations App</h1>
-      <div className="quotes">
-        {quoteid <= quotes.length
-          ? quotes
-              .filter((quote) => quote.id === quoteid)
-              .map((quotations) => quotations.quotation)
-          : setQuoteId(1)}
+    <div>
+      <h1 className="heading">Quotations App</h1>
+      <div className="container">
+        <div className="app">
+          <div className="quotes">
+            {quoteid <= quotes.length
+              ? quotes
+                  .filter((quote) => quote.id === quoteid)
+                  .map((quotations) => quotations.quotation)
+              : setQuoteId(1)}
+          </div>
+          <div className="title">
+            {quoteid <= quotes.length
+              ? quotes
+                  .filter((quote) => quote.id === quoteid)
+                  .map((quotations) => quotations.title)
+              : setQuoteId(1)}
+          </div>
+          <br />
+          <button className="button" onClick={() => setQuoteId(++quoteid)}>
+            Next
+          </button>
+        </div>
       </div>
-      <div className="title">
-        {quoteid <= quotes.length
-          ? quotes
-              .filter((quote) => quote.id === quoteid)
-              .map((quotations) => quotations.title)
-          : setQuoteId(1)}
-      </div>
-      <br />
-      <button onClick={() => setQuoteId(++quoteid)}>Next</button>
     </div>
   );
 };
