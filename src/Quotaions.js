@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./App.css";
 
 const Quotations = () => {
-  let [quotes, setquotes] = useState([
+  let [quotes] = useState([
     {
       id: 1,
       title: "Bill Gates",
